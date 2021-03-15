@@ -7,7 +7,7 @@ class Solution:
         n = len(nums)
         maxque, minque = deque(), deque()
         left = right = ret =0
-        
+
         while right < n:
             while maxque and maxque[-1] < nums[right]:
                 maxque.pop()
@@ -16,7 +16,7 @@ class Solution:
 
             maxque.append(nums[right])
             minque.append(nums[right])
-            
+
             while maxque and minque and maxque[0] - minque[0] > limit:
                 if nums[left] == minque[0]:
                     minque.popleft()
@@ -27,6 +27,8 @@ class Solution:
             ret = max(ret, right - left + 1)
             right += 1
         return ret
+
+
 if __name__ == "__main__":
     s = Solution()
     print(s.longestSubarray([8, 2, 4, 7], 4))
