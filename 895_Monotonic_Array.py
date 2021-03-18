@@ -11,7 +11,7 @@ class Solution:
                 increase = False
             if not (increase or decrease):
                 return False
-            
+
         return increase or decrease
 
 
