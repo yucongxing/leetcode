@@ -27,7 +27,7 @@ class Solution:
             start = i
             while i <= right and s[i] != split:
                 i += 1
-            
+
             longest = max(longest,self.divideConquer(s, start, i - 1, k))
 
         return longest
