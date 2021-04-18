@@ -5,11 +5,10 @@ class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
         quick, slow = 1, 0
         while quick < len(nums):
-            if nums[quick] == nums[slow]:
-                quick += 1
-            else:
+            if nums[quick] != nums[slow]:
                 nums[slow + 1] = nums[quick]
                 slow += 1
+            quick += 1
         return slow + 1
 
 
