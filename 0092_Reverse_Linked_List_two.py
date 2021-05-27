@@ -2,7 +2,7 @@ from typing import List
 
 
 class ListNode:
-    def __init__(self, val = 0, next = None):
+    def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
 
@@ -15,10 +15,10 @@ def printlist(head: ListNode):
     print()
 
 
-def createlist(l: List) -> ListNode:
+def createlist(l: List[int]) -> ListNode:
     head = ListNode(l[0])
     p = head
-    for i in range(1,len(l)):
+    for i in range(1, len(l)):
         t = ListNode(l[i])
         p.next = t
         p = p.next
@@ -43,7 +43,7 @@ class Solution:
         pright.next = None
         old = None
         new = pleft
-        while(new):
+        while (new):
             t = new.next
             new.next = old
             old = new
@@ -53,13 +53,14 @@ class Solution:
 
         return dummy.next
 
+
 if __name__ == '__main__':
     s = Solution()
-    head = createlist([1,2,3,4,5])
+    head = createlist([1, 2, 3, 4, 5])
     printlist(head)
-    s.reverseBetween(head,2,4)
+    s.reverseBetween(head, 2, 4)
     printlist(head)
     head = createlist([1])
     printlist(head)
-    s.reverseBetween(head,1,1)
+    s.reverseBetween(head, 1, 1)
     printlist(head)
