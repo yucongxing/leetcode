@@ -1,4 +1,4 @@
-from typing import Dict, List
+from typing import Dict, List, Optional
 
 
 class TreeNode:
@@ -13,7 +13,7 @@ class Solution:
         father = dict()
         father[root.val] = None
 
-        def dfs(root: TreeNode, father: Dict, p: TreeNode) -> None:
+        def dfs(root: Optional[TreeNode], father: Dict, p: Optional[TreeNode]) -> None:
             if root is None:
                 return
             if not p is None:
