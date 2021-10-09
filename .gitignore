@@ -3,3 +3,4 @@
 *.o
 .ccls
 .vim
+compile_flags.txt
