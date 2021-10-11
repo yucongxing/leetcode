@@ -4,3 +4,4 @@
 .ccls
 .vim
 compile_flags.txt
+*.exe
